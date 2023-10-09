@@ -27,8 +27,11 @@ function App() {
       <div
         className="container-fluid h-screen d-flex justify-content-center align-items-center bg-cover bg-no-repeat"
         style={{
-          backgroundImage: `url('https://i.pinimg.com/564x/e6/8a/17/e68a175caa08d46b0cab1a13c3a1877c.jpg')`,
+          backgroundImage: `url('https://images.pexels.com/photos/1629172/pexels-photo-1629172.jpeg?auto=compress&cs=tinysrgb&w=600')`,
           height: "100vh",
+          backgroundSize:"cover",
+          backgroundRepeat: "no-repeat",
+          backgroundAttachment: "fixed",
         }}
       >
         <div className="max-w-md mx-auto border border-gray-60 rounded-lg p-5 backdrop-blur-sm bg-opacity-50 bg-secondary" style={{borderRadius:"2%"}}>
@@ -39,7 +42,7 @@ function App() {
             }}
           >
             <div className="mb-3">
-              <label className="form-label">From</label>
+              {/* <label className="form-label">From</label> */}
               <InputBox
                 label="From"
                 amount={amount}
@@ -59,7 +62,7 @@ function App() {
               </button>
             </div>
             <div className="mb-4">
-              <label className="form-label">To</label>
+              {/* <label className="form-label">To</label> */}
               <InputBox
                 label="To"
                 amount={convertedAmount}

@@ -11,11 +11,10 @@ const InputBox = ({
   currencyDisabled = false,
   className = "",
 }) => {
-  // console.log(selectCurrency)
   const bindId = useId();
   return (
     <div class={`bg-white p-3 rounded-lg text-sm d-flex ${className}`}>
-      <div class="w-50">
+      <div class="w-50 me-2">
         <label htmlFor={bindId} class="text-muted mb-2 d-inline-block">
           {label}
         </label>
@@ -26,6 +25,7 @@ const InputBox = ({
           placeholder="Amount"
           disabled={amountDisabled}
           value={amount}
+          min={1}
           onChange={(e) => onAmountChange && onAmountChange(Number(e.target.value))}
         />
       </div>
